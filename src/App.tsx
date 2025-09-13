@@ -1,34 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="container">
+      <header className="header">
+        <div className="header-content">
+          <a href="/" className="logo">Receipt2Budget</a>
+          <nav className="nav">
+            <a href="/" className="nav-link active">Dashboard</a>
+            <a href="/upload" className="nav-link">Upload</a>
+            <a href="/reports" className="nav-link">Reports</a>
+          </nav>
+        </div>
+      </header>
+
+      <main className="main-layout">
+        <div className="main-content">
+          <h1>Welcome to Receipt2Budget</h1>
+          <p>Upload your receipts and track your expenses automatically!</p>
+          
+          <div className="dashboard-grid">
+            <div className="dashboard-card">
+              <h3>Quick Upload</h3>
+              <p>Upload receipts by photo or PDF</p>
+              <button className="btn btn-primary">Upload Receipt</button>
+            </div>
+            
+            <div className="dashboard-card">
+              <h3>This Month</h3>
+              <p>Total expenses: $0.00</p>
+              <button className="btn btn-outline">View Details</button>
+            </div>
+            
+            <div className="dashboard-card">
+              <h3>Categories</h3>
+              <p>Track spending by category</p>
+              <button className="btn btn-outline">View Categories</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <p>&copy; 2024 Receipt2Budget. Built with React + Vite.</p>
+        </div>
+      </footer>
+    </div>
   )
 }
 
