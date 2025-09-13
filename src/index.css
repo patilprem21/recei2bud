@@ -1,4 +1,9 @@
-/* Import organized CSS files */
+/* Import organized CSS files first */
 @import './styles/globals.css';
 @import './styles/components.css';
 @import './styles/layout.css';
+
+/* TailwindCSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
