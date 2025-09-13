@@ -43,9 +43,9 @@ function App() {
       <footer className="footer">
         <div className="footer-content">
           <p>&copy; 2024 Receipt2Budget. Built with React + Vite.</p>
-        </div>
+      </div>
       </footer>
-    </div>
+      </div>
   )
 }
 
